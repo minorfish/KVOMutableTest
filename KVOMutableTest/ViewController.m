@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "TSMutableArray.h"
 
 @interface ViewController ()
+
+@property (nonatomic) TSMutableArray *array;
 
 @end
 
@@ -16,9 +19,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *item1 = @"itemA";
+    NSString *item2 = @"itemB";
+    NSString *item3 = @"itemC";
+    NSArray *items = @[item1, item2, item3];
+    self.array = [[TSMutableArray alloc] init];
+     [self.array addObserver:self forKeyPath:@"items" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:NULL];
+     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0,items.count)];
+    [self.array insertItems:items atIndexes:indexSet];
+    [self.array addItems:items];
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"items"]) {
+        NSNumber *kind = change[NSKeyValueChangeKindKey];
+        NSArray *students = change[NSKeyValueChangeNewKey];
+        NSArray *oldStudent = change[NSKeyValueChangeOldKey];
+        NSIndexSet *changedIndexs = change[NSKeyValueChangeIndexesKey];
+        
+        NSLog(@"kind: %@, item: %@, oldItem: %@, changedIndexs: %@", kind, students, oldStudent, changedIndexs);
+    }
+}
+
+- (void)dealloc
+{
+    [self removeObserver:self forKeyPath:@"items" context:NULL];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

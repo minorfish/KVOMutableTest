@@ -15,6 +15,7 @@
 		A82F43921FFF575F00B0E08A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F43911FFF575F00B0E08A /* main.m */; };
 		A82F439C1FFF575F00B0E08A /* KVOMutableTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F439B1FFF575F00B0E08A /* KVOMutableTestTests.m */; };
 		A82F43A71FFF575F00B0E08A /* KVOMutableTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F43A61FFF575F00B0E08A /* KVOMutableTestUITests.m */; };
+		A82F43B61FFF57B600B0E08A /* TSMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A82F43B51FFF57B600B0E08A /* TSMutableArray.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		A82F43A21FFF575F00B0E08A /* KVOMutableTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVOMutableTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82F43A61FFF575F00B0E08A /* KVOMutableTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOMutableTestUITests.m; sourceTree = "<group>"; };
 		A82F43A81FFF575F00B0E08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A82F43B41FFF57B600B0E08A /* TSMutableArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSMutableArray.h; sourceTree = "<group>"; };
+		A82F43B51FFF57B600B0E08A /* TSMutableArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSMutableArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				A82F438D1FFF575F00B0E08A /* LaunchScreen.storyboard */,
 				A82F43901FFF575F00B0E08A /* Info.plist */,
 				A82F43911FFF575F00B0E08A /* main.m */,
+				A82F43B41FFF57B600B0E08A /* TSMutableArray.h */,
+				A82F43B51FFF57B600B0E08A /* TSMutableArray.m */,
 			);
 			path = KVOMutableTest;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				A82F43871FFF575F00B0E08A /* ViewController.m in Sources */,
 				A82F43921FFF575F00B0E08A /* main.m in Sources */,
 				A82F43841FFF575F00B0E08A /* AppDelegate.m in Sources */,
+				A82F43B61FFF57B600B0E08A /* TSMutableArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
